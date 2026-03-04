@@ -63,6 +63,7 @@ class ProfileController extends USVN_Controller
 
 	public function indexAction()
 	{
+		$this->view->config = new USVN_Config_Ini(USVN_CONFIG_FILE, USVN_CONFIG_SECTION);
 		$this->view->user = $this->getUser();
 		if ($this->view->user === null) {
 			$this->_redirect("/admin/user/");
