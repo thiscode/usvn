@@ -133,7 +133,7 @@ class USVN_Config
 		$config->ldap->options->accountCanonicalForm = filter_var($ldap_options['accountCanonicalForm'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		$config->ldap->options->accountDomainName = filter_var($ldap_options['accountDomainName'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		$config->ldap->options->accountDomainNameShort = filter_var($ldap_options['accountDomainNameShort'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$config->ldap->options->accountFilterFormat = filter_var($ldap_options['accountFilterFormat'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+		$config->ldap->options->accountFilterFormat = filter_var($ldap_options['accountFilterFormat'], FILTER_SANITIZE_URL);
 		$config->ldap->options->allowEmptyPassword = filter_var($ldap_options['allowEmptyPassword'], FILTER_SANITIZE_NUMBER_INT);
 		$config->ldap->options->optReferrals = filter_var($ldap_options['optReferrals'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 		$config->save();
